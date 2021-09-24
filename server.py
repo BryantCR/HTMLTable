@@ -11,7 +11,7 @@ users = [
 ]
 
 @app.route( '/', methods=['GET'] )
-def getNameByDictionary( ):
+def getNameByDictionary():
     return render_template( 'index.html', users1 = users)
 
 
