@@ -3,15 +3,14 @@ from flask import render_template
 
 app = Flask( __name__ )
 
-users = [
+@app.route( '/', methods=['GET'] )
+def getNameByDictionary():
+    users = [
     {'first_name' : 'Michael', 'last_name' : 'Choi'},
     {'first_name' : 'John', 'last_name' : 'Supsupin'},
     {'first_name' : 'Mark', 'last_name' : 'Guillen'},
     {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
-
-@app.route( '/', methods=['GET'] )
-def getNameByDictionary():
     return render_template( 'index.html', users1 = users)
 
 
