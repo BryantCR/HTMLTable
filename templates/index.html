@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Table</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='./../../static/styles.css }}">
+    </head>
+    <body>
+        <main>
+            <table>
+                <thead>
+                    <td>
+                        First Name    
+                    </td>
+                    <td>
+                        Last Name    
+                    </td>
+                    <td>
+                        Full Name 
+                    </td>
+                </thead>
+                <tbody>
+                    {% for users in users1 %}
+                        <tr>                   
+                            <td>
+                                {{users['first_name']}}
+                            </td>
+                            <td>
+                                {{users['last_name']}}
+                            </td>
+                            <td>
+                                {{users['first_name']}} {{users['last_name']}}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
+
